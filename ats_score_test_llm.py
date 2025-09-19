@@ -1,6 +1,7 @@
 from sentence_transformers import SentenceTransformer, util
+import requests
 
-model = SentenceTransformer("sentence-transformers/distiluse-base-multilingual-cased-v2")
+model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
 
 resumes = [
     "Développeur logiciel avec 3 ans d'expérience en Python et Django.",
@@ -26,3 +27,4 @@ results = sorted(results, key=lambda x: x[1], reverse=True)
 
 for rank, (resume, score) in enumerate(results, start=1):
     print(f"Rank {rank} | Score: {score:.4f} | Resume: {resume}")
+
