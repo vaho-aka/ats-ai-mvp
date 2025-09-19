@@ -2,11 +2,27 @@ from sentence_transformers import SentenceTransformer, util
 
 model = SentenceTransformer("sentence-transformers/distiluse-base-multilingual-cased-v2")
 
-resume_text = "Développeur Full Stack avec expérience en Python et React."
-job_text = "Nous recherchons un ingénieur logiciel avec des compétences en React et Python."
+resumes = [
+    "Développeur logiciel avec 3 ans d'expérience en Python et Django.",
+    "Ingénieur en réseaux et sécurité, spécialisé en Cisco et Linux.",
+    "Développeur fullstack avec JavaScript, React et Node.js.",
+    "Analyste de données avec expérience SQL et Python."
+]
+job_text = "Nous recherchons un développeur Python avec expérience en Django et bases de données SQL."
 
-emb_resume = model.encode(resume_text, convert_to_tensor=True)
+emb_resume = model.encode(resumes, convert_to_tensor=True)
 emb_job = model.encode(job_text, convert_to_tensor=True)
 
-score = util.cos_sim(emb_resume, emb_job)
-print("Matching Score:", score.item())
+scores = util.cos_sim(emb_resume, emb_job)
+
+print(scores.shape)
+
+scores = scores.squeeze().tolist() 
+results = list(zip(resumes, scores))
+results = sorted(results, key=lambda x: x[1], reverse=True)
+
+# Print results
+#print("Matching Score:", score.item())
+
+for rank, (resume, score) in enumerate(results, start=1):
+    print(f"Rank {rank} | Score: {score:.4f} | Resume: {resume}")
