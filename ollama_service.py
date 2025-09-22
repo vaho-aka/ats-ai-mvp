@@ -22,7 +22,3 @@ def extract_keywords(job_description):
     # Split into keywords
     keywords = [kw.strip() for kw in output.split(",") if kw.strip()]
     return keywords
-
-# Example usage
-#job = "Nous recherchons un développeur Python avec expérience en Django et bases de données SQL."
-#print(extract_keywords(job))
