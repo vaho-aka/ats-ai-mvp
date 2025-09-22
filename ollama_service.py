@@ -6,7 +6,7 @@ def extract_keywords(job_description):
     {job_description}
 
     Donne-moi uniquement une liste de 5 à 10 mots-clés importants, séparés par des virgules.
-    Ne mets rien d’autre dans la réponse.
+    Ne mets rien d'autre dans la réponse.
     """
 
     # Run Ollama (this will stream plain text, not JSON)
@@ -24,5 +24,5 @@ def extract_keywords(job_description):
     return keywords
 
 # Example usage
-job = "Nous recherchons un développeur Python avec expérience en Django et bases de données SQL."
-print(extract_keywords(job))
+#job = "Nous recherchons un développeur Python avec expérience en Django et bases de données SQL."
+#print(extract_keywords(job))
