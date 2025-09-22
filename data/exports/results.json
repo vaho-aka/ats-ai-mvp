@@ -1,22 +1,22 @@
 [
     {
         "rank": 1,
-        "score": 0.8213,
+        "score": 0.8227,
         "resume": "Développeur logiciel avec 3 ans d'expérience en Python et Django."
     },
     {
         "rank": 2,
-        "score": 0.5756,
+        "score": 0.5593,
         "resume": "Analyste de données avec expérience SQL et Python."
     },
     {
         "rank": 3,
-        "score": 0.2537,
+        "score": 0.2583,
         "resume": "Ingénieur en réseaux et sécurité, spécialisé en Cisco et Linux."
     },
     {
         "rank": 4,
-        "score": 0.2149,
+        "score": 0.2035,
         "resume": "Développeur fullstack avec JavaScript, React et Node.js."
     }
 ]

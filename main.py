@@ -1,6 +1,6 @@
 import json
 import csv
-from ats_score_test_llm import match_resumes
+from ats_score_test import match_resumes
 from ollama_service import extract_keywords
 
 # Input data
@@ -38,5 +38,5 @@ def export_to_json(results, filename="results.json"):
     print(f"✅ Results exported to {filename}")
 
 # Run exports
-export_to_csv(results)
-export_to_json(results)
+export_to_csv(results,  filename="data/exports/results.csv")
+export_to_json(results,  filename="data/exports/results.json")

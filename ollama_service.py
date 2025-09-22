@@ -5,7 +5,7 @@ def extract_keywords(job_description):
     Voici une description de poste : 
     {job_description}
 
-    Donne-moi uniquement une liste de 5 à 10 mots-clés importants, séparés par des virgules.
+    Donne-moi uniquement une liste mots-clés importants, séparés par des virgules.
     Ne mets rien d'autre dans la réponse.
     """
 
